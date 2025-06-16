@@ -40,7 +40,7 @@
                 <a href="{{ route('front.category', $category) }}" class="fundrising-card bg-[#2F9297] rounded-[30px] w-[135px] min-h-[160px] flex flex-col items-center gap-3 p-5 border border-[#E8E9EE]">
                     <div class="w-[60px] h-[60px] flex shrink-0 overflow-hidden">
                         {{-- <img src="{{ Storage::url($category->icon)}}" alt="icon"> --}}
-                        <img src="{{ asset('storage/' . $category->icon)}}" alt="icon">
+                        <img src="{{ asset('Storage/' . $category->icon)}}" alt="icon">
                     </div>
                     <span class="font-semibold text-center my-auto text-white">{{ $category->name }}</span>
                 </a>
@@ -62,7 +62,7 @@
                     <a href="{{ route('front.details', $fundraising) }}">
                         <div class="rounded-2xl w-full h-[120px] flex shrink-0 overflow-hidden">
                             {{-- <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
-                            <img src="{{asset('storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
+                            <img src="{{asset('Storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
                         </div>
                     </a>
                     <div class="flex flex-col gap-[6px]">
@@ -90,7 +90,7 @@
                 <div class="w-full border bg-[#2F9297] border-[#E8E9EE] flex items-center p-[14px] gap-3 rounded-2xl ">
                     <div class="w-20 h-[90px] flex shrink-0 rounded-2xl overflow-hidden">
                         {{-- <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
-                        <img src="{{asset('storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
+                        <img src="{{asset('Storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
                     </div>
                     <div class="flex flex-col gap-1">
                         <p class="font-bold line-clamp-1 text-white hover:line-clamp-none">{{ $fundraising->name }}</p>
