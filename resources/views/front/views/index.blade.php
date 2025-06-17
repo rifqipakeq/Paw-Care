@@ -39,7 +39,8 @@
             <div class="px-2 first-of-type:pl-4 last-of-type:pr-4">
                 <a href="{{ route('front.category', $category) }}" class="fundrising-card bg-[#2F9297] rounded-[30px] w-[135px] min-h-[160px] flex flex-col items-center gap-3 p-5 border border-[#E8E9EE]">
                     <div class="w-[60px] h-[60px] flex shrink-0 overflow-hidden">
-                        <img src="{{ Storage::url($category->icon)}}" alt="icon">
+                        <img src="{{ route('files.show', ['path' => $category->icon]) }}" alt="icon">
+                        {{-- <img src="{{ Storage::url($category->icon)}}" alt="icon"> --}}
                         {{-- <img src="{{ asset('Storage/' . $category->icon)}}" alt="icon"> --}}
                     </div>
                     <span class="font-semibold text-center my-auto text-white">{{ $category->name }}</span>
@@ -61,7 +62,8 @@
                 <div class="flex flex-col gap-[14px] rounded-2xl border bg-[#2F9297] border-[#E8E9EE] p-[14px] w-[208px]">
                     <a href="{{ route('front.details', $fundraising) }}">
                         <div class="rounded-2xl w-full h-[120px] flex shrink-0 overflow-hidden">
-                            <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
+                            <img src="{{ route('files.show', ['path' => $fundraising->thumbnail]) }}" class="w-full h-full object-cover" alt="thumbnail">
+                            {{-- <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
                             {{-- <img src="{{asset('Storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
                         </div>
                     </a>
@@ -89,7 +91,9 @@
             <a href="{{ route('front.details', $fundraising) }}" class="card">
                 <div class="w-full border bg-[#2F9297] border-[#E8E9EE] flex items-center p-[14px] gap-3 rounded-2xl ">
                     <div class="w-20 h-[90px] flex shrink-0 rounded-2xl overflow-hidden">
-                        <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail">
+                        <img src="{{ route('files.show', ['path' => $fundraising->thumbnail]) }}" class="w-full h-full object-cover" alt="thumbnail">
+                        {{-- Uncomment below lines if you want to use Storage facade or asset helper --}}
+                        {{-- <img src="{{Storage::url($fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
                         {{-- <img src="{{asset('Storage/' . $fundraising->thumbnail)}}" class="w-full h-full object-cover" alt="thumbnail"> --}}
                     </div>
                     <div class="flex flex-col gap-1">
