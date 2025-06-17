@@ -47,7 +47,6 @@ class CategoryController extends Controller
                     return redirect()->back()->withErrors(['icon' => 'File upload failed']);
                 }
                 
-
                 $iconPath = $request->file('icon')->store('icons','public');
                 $validated['icon'] = $iconPath;
             } else {
