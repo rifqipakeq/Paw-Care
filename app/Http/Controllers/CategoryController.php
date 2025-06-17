@@ -43,6 +43,11 @@ class CategoryController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('icon')){
+                if(!$request->file('icon')->isValid()){
+                    return redirect()->back()->withErrors(['icon' => 'File upload failed']);
+                }
+                
+
                 $iconPath = $request->file('icon')->store('icons','public');
                 $validated['icon'] = $iconPath;
             } else {
