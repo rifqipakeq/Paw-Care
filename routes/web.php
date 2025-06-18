@@ -3,7 +3,6 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonaturController;
-use App\Http\Controllers\FileController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FundraiserController;
 use App\Http\Controllers\FundraisingController;
@@ -24,7 +23,6 @@ Route::get('/checkout/{fundraising:slug}/{totalAmountDonation}', [FrontControlle
 
 Route::post('/checkout/store/{fundraising:slug}/{totalAmountDonation}', [FrontController::class, 'store'])->name('front.store');
 
-Route::get('/files/{path}', [FileController::class, 'show'])->where('path', '.*')->name('files.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
