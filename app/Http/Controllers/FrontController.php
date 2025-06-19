@@ -31,6 +31,18 @@ class FrontController extends Controller
         return view('front.views.details', compact('fundraising','goalReached'));
     }
 
+    public function specific(Category $category){
+        $categories = Category::all();
+
+        return view('front.views.specific', ['categories' => $categories]);
+    }
+
+    public function specificFund(Fundraising $fundraising){
+        $fundraising = Fundraising::all();
+
+        return view('front.views.specificFund', ['fundraising' => $fundraising]);
+    }
+
     public function support(Fundraising $fundraising){
         return view('front.views.donation', compact('fundraising'));
     }

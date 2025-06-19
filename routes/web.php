@@ -15,6 +15,10 @@ Route::get('/', [FrontController::class, 'index'])->name('front.index');
 
 Route::get('/category/{category}', [FrontController::class, 'category'])->name('front.category');
 
+Route::get('/specific/', [FrontController::class, 'specific'])->name('front.specific');
+
+Route::get('/specific-fund/', [FrontController::class, 'specificFund'])->name('front.specificFund');
+
 Route::get('/details/{fundraising:slug}', [FrontController::class, 'details'])->name('front.details');
 
 Route::get('/support/{fundraising:slug}', [FrontController::class, 'support'])->name('front.support');
@@ -22,7 +26,6 @@ Route::get('/support/{fundraising:slug}', [FrontController::class, 'support'])->
 Route::get('/checkout/{fundraising:slug}/{totalAmountDonation}', [FrontController::class, 'checkout'])->name('front.checkout');
 
 Route::post('/checkout/store/{fundraising:slug}/{totalAmountDonation}', [FrontController::class, 'store'])->name('front.store');
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
