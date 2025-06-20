@@ -37,10 +37,10 @@ class FrontController extends Controller
         return view('front.views.specific', ['categories' => $categories]);
     }
 
-    public function specificFund(Fundraising $fundraising){
+    public function specificfund(Fundraising $fundraising){
         $fundraising = Fundraising::all();
 
-        return view('front.views.specificFund', ['fundraising' => $fundraising]);
+        return view('front.views.specific-fund', ['fundraising' => $fundraising]);
     }
 
     public function support(Fundraising $fundraising){

@@ -58,7 +58,7 @@
                 </div>
                 @empty 
                 <p>
-                    KOSONGG
+                    Belum ada data tersedia.
                 </p>
                 @endforelse
 

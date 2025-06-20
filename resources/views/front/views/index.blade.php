@@ -31,7 +31,7 @@
     <div id="popular-fundrising" class="mt-8">
         <div class="px-4 flex justify-between items-center">
             <h2 class="font-bold text-lg">Kategori <br>Bantuan</h2>
-            <a href="" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
+            <a href="{{ route('front.specific')  }}" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
         </div>
         <div class="main-carousel mt-[14px]">
 
@@ -51,7 +51,7 @@
     <div id="best-choices" class="mt-8 -mb-6">
         <div class="px-4 flex justify-between items-center">
             <h2 class="font-bold text-lg">Penggalangan Dana <br>Favorite</h2>
-            <a href="" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
+            <a href="{{ route('front.specific-fund') }}" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
         </div>
         <div class="main-carousel mt-[14px]">
 
@@ -75,11 +75,11 @@
             @endforelse
 
         </div>
-    </div>
+    </div>  
     <div id="latest-fundrising" class="mt-8">
         <div class="px-4 flex justify-between items-center">
             <h2 class="font-bold text-lg">Penggalangan Dana <br>Terbaru</h2>
-            <a href="" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
+            <a href="{{ route('front.specific-fund') }}" class="p-[6px_12px] rounded-full bg-[#E8E9EE] font-semibold text-sm">Lihat Semua</a>
         </div>
         <div class="flex flex-col gap-4 mt-[14px] px-4">
 
