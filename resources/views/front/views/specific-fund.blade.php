@@ -36,7 +36,7 @@
             </div>
         </a>
         @empty
-        <p>Belum ada data tersedia.</p>
+            <p>Belum ada data tersedia.</p>
         @endforelse
 
     </div>

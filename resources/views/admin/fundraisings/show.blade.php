@@ -132,7 +132,7 @@
                 </div>
                 @empty 
                 <p>
-                    KOSONG LEKK
+                    Belum ada data tersedia.
                 </p>
                 @endforelse 
                 

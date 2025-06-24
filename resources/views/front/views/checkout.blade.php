@@ -7,14 +7,14 @@
         <nav class="pt-5 px-3 flex justify-between items-center relative z-20">
             <div class="flex items-center gap-[10px]">
                 <a href="{{ route('front.support', $fundraising->slug) }}" class="w-10 h-10 flex shrink-0">
-                    <img src="{{ asset('assets/images/icons/back.svg') }}" alt="icon">
+                    <img src="{{ asset('assets/images/icons/back-pet.svg') }}" alt="icon">
                 </a>
             </div>
             <div class="flex flex-col items-center text-center">
-                <p class="font-semibold text-sm">#SendSupport</p>
+                <p class="font-semibold text-sm">Kirim Donasi</p>
             </div>
             <a href="" class="w-10 h-10 flex shrink-0">
-                <img src="{{ asset('assets/images/icons/menu-dot.svg') }}" alt="icon">
+                {{-- <img src="{{ asset('assets/images/icons/menu-dot.svg') }}" alt="icon"> --}}
             </a>
         </nav>
         <div class="flex items-center px-4 my-auto gap-[14px]">
@@ -33,18 +33,18 @@
             <form method="POST" action="{{ route('front.store', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => $totalAmountDonation])}}" class="flex flex-col gap-5" enctype="multipart/form-data">
                 @csrf
                 <div class="flex flex-col gap-[10px]">
-                    <p class="font-semibold text-sm">Your Donation</p>
+                    <p class="font-semibold text-sm">Donasi Anda</p>
                     <div class="bg-[#E8E9EE] w-full flex items-center rounded-2xl p-[14px_16px] gap-[10px]">
-                        <div class="w-6 h-6 flex shrink-0">
+                        {{-- <div class="w-6 h-6 flex shrink-0">
                             <img src="{{ asset('assets/images/icons/dollar-circle.svg') }}" alt="icon">
-                        </div>
+                        </div> --}}
                         <p class="font-semibold">Rp {{ number_format($totalAmountDonation, 0, ',','.') }}</p>
                     </div>
                     <input type="hidden" id="amount" name="amount" value="1000000">
                 </div>
                 <hr class="border-dashed">
                 <div class="flex flex-col gap-[10px]">
-                    <p class="font-semibold text-sm">Send Payment to</p>
+                    <p class="font-semibold text-sm">Kirimi Pembayaran Ke</p>
                     <div class="w-full p-4 rounded-2xl border border-[#E8E9EE]">
                         <button type="button" class="accordion-button flex w-full justify-between items-center" data-accordion="accordion-faq-1">
                             <div class="flex shrink-0 h-6 overflow-hidden">
@@ -63,13 +63,13 @@
                                 </div>
                                 <div class="flex items-center justify-between">
                                     <span class="text-sm text-[#66697A]">Account Number</span>
-                                    <span class="font-semibold text-sm">893092093</span>
-                                    <input type="hidden" id="number" name="number" value="893092093">
+                                    <span class="font-semibold text-sm">3303323230323230</span>
+                                    <input type="hidden" id="number" name="number" value="3303323230323230">
                                 </div>
                                 <div class="flex items-center justify-between">
                                     <span class="text-sm text-[#66697A]">Account Name</span>
-                                    <span class="font-semibold text-sm">AnggaMustHelp</span>
-                                    <input type="hidden" id="account" name="account" value="AnggaMustHelp">
+                                    <span class="font-semibold text-sm">PawCare Shelter</span>
+                                    <input type="hidden" id="account" name="account" value="PawCareShelter">
                                 </div>
                             </div>
                         </div>
@@ -77,12 +77,12 @@
                 </div>
                 <hr class="border-dashed">
                 <div class="flex flex-col gap-[10px]">
-                    <p class="font-semibold text-sm">Your Name</p>
+                    <p class="font-semibold text-sm">Nama</p>
                     <div class="flex items-center w-full p-[14px_16px] rounded-2xl border border-[#E8E9EE] focus-within:border-[#292E4B] transition-all duration-300">
                         <div class="mr-[10px] w-6 h-6 flex items-center justify-center overflow-hidden">
                             <img src="{{ asset('assets/images/icons/user.svg') }}" class="h-full w-full object-contain" alt="icon">
                         </div>
-                        <input type="text" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="What’s your name?" name="name">
+                        <input type="text" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="Masukkan Nama Anda" name="name">
                     </div>
                 </div>
                 <div class="flex flex-col gap-[10px]">
@@ -91,31 +91,31 @@
                         <div class="mr-[10px] w-6 h-6 flex items-center justify-center overflow-hidden">
                             <img src="{{ asset('assets/images/icons/call.svg') }}" class="h-full w-full object-contain" alt="icon">
                         </div>
-                        <input type="number" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="Write phone number" name="phone_number">
+                        <input type="number" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="Masukan Nomor WhatsApp Anda" name="phone_number"> 
                     </div>
                 </div>
                 <div class="flex flex-col gap-[10px]">
-                    <p class="font-semibold text-sm">Proof of Payment</p>
+                    <p class="font-semibold text-sm">Bukti Pembayaran</p>
                     <div class="relative">
                         <button type="button" class="p-[14px_16px] rounded-2xl flex gap-[10px] w-full border border-[#E8E9EE] focus-within:border-[#292E4B] transition-all duration-300" onclick="document.getElementById('file').click()">
                             <div class="w-6 h-6 flex shrink-0">
                                 <img src="{{ asset('assets/images/icons/receipt-text.svg') }}" alt="icon">
                             </div>
-                            <p id="fileLabel">Add an attachment</p>
+                            <p id="fileLabel">Tambahkan Bukti Pembayaran</p>
                         </button>
                         <input id="file" type="file" name="proof" class="hidden" onchange="updateFileName(this)">
                     </div>
                 </div>
                 <div class="flex flex-col gap-[10px]">
-                    <p class="font-semibold text-sm">Your Notes</p>
+                    <p class="font-semibold text-sm">Pesan</p>
                     <div class="flex w-full p-[14px_16px] rounded-2xl border border-[#E8E9EE] focus-within:border-[#292E4B] transition-all duration-300">
                         <div class="mr-[10px] w-6 h-6 flex items-center justify-center overflow-hidden">
                             <img src="{{ asset('assets/images/icons/sms.svg') }}" class="h-full w-full object-contain" alt="icon">
                         </div>
-                        <textarea name="noted" id="noted" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" cols="30" rows="4" placeholder="Write your beautiful message"></textarea>
+                        <textarea name="noted" id="noted" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" cols="30" rows="4" placeholder="Tulis Pesan Anda"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="p-[14px_20px] bg-[#76AE43] rounded-full text-white w-full mx-auto font-semibold hover:shadow-[0_12px_20px_0_#76AE4380] transition-all duration-300 text-nowrap text-center">Confirm My Donation</button>
+                <button type="submit" class="p-[14px_20px] bg-[#76AE43] rounded-full text-white w-full mx-auto font-semibold hover:shadow-[0_12px_20px_0_#76AE4380] transition-all duration-300 text-nowrap text-center">Konfirmasi Donasi Saya</button>
             </form>
         </div>
     </div>

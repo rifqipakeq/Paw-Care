@@ -47,7 +47,7 @@ class CategoryController extends Controller
                     return redirect()->back()->withErrors(['icon' => 'File upload failed']);
                 }
                 
-                $iconPath = $request->file('icon')->store('icons','public');
+                $iconPath = $request->file('icon')->store('icons','cloudinary');
                 $validated['icon'] = $iconPath;
             } else {
                 $iconPath = 'images/icon-category-default.png';
@@ -91,7 +91,7 @@ class CategoryController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('icon')){
-                $iconPath = $request->file('icon')->store('icons','public');
+                $iconPath = $request->file('icon')->store('icons','cloudinary');
                 $validated['icon'] = $iconPath;
             } 
             

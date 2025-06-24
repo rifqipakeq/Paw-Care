@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
         ]);
 
         if($request->hasFile('avatar')){
-            $avatarPath = $request->file('avatar')->store('avatars','public');
+            $avatarPath = $request->file('avatar')->store('avatars','cloudinary');
         }
 
         $user = User::create([

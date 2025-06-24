@@ -57,7 +57,7 @@ class FrontController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('proof')){
-                $proofPath = $request->file('proof')->store('proofs','public');
+                $proofPath = $request->file('proof')->store('proofs','cloudinary');
                 $validated['proof'] = $proofPath;
             }
 

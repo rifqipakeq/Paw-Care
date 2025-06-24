@@ -38,7 +38,7 @@ class FundraisingiPhaseController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('photo')){
-                $photoPath = $request->file('photo')->store('photos','public');
+                $photoPath = $request->file('photo')->store('photos','cloudinary');
                 $validated['photo'] = $photoPath;
             } 
 

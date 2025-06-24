@@ -2,7 +2,7 @@
 @section('title', 'donation-page')
 @section('content')
 
-<section class="max-w-[640px] w-full min-h-screen mx-auto flex flex-col bg-[#FA9852] overflow-x-hidden">
+<section class="max-w-[640px] w-full min-h-screen mx-auto flex flex-col bg-[#FCF7F1] overflow-x-hidden">
     <div class="header flex flex-col overflow-hidden h-[220px] relative">
         <nav class="pt-5 px-3 flex justify-between items-center relative z-20">
             <div class="flex items-center gap-[10px]">
@@ -23,8 +23,8 @@
                 <p class="w-[90px] h-[23px] bg-[#4541FF] text-center p-[4px_12px] absolute bottom-0 font-bold text-[10px] leading-[15px] text-white">VERIFIED</p>
             </div>
             <div class="flex flex-col gap-1">
-                <p class="font-bold leading-[22px] text-white">{{ $fundraising->name }}</p>
-                <p class="text-xs leading-[18px] text-white">Target <span class="font-bold text-white">Rp {{ number_format($fundraising->target_amount, 0, ',','.') }}</span></p>
+                <p class="font-bold leading-[22px] ">{{ $fundraising->name }}</p>
+                <p class="text-xs leading-[18px] ">Target <span class="font-bold text-[#FF7815]">Rp {{ number_format($fundraising->target_amount, 0, ',','.') }}</span></p>
             </div>
         </div>
     </div>
@@ -32,23 +32,23 @@
         <div id="content" class="w-full min-h-[calc(100vh-220px)] h-full bg-white rounded-t-[40px] flex flex-col gap-[30px] p-[30px_24px_30px]">
             <h1 class="text-center font-extrabold text-[24px] leading-[36px]">Pilih<br>Nominal Donasi</h1>
             <div class="grid grid-cols-2 w-fit mx-auto justify-center gap-[30px]">
-                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 15000])}}" class="w-[150px] h-[150px] flex items-center justify-center p-4 rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 15000])}}" class="w-[150px] h-[150px] flex items-center justify-center p-4 rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-2xl text-white">Rp 15.000</span>
                 </a>
                 <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 50000])}}"
-                class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-2xl text-white">Rp 50.000</span>
                 </a>
-                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 250000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 250000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-2xl text-white">Rp 250.000</span>
                 </a>
-                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 500000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 500000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-2xl text-white">Rp 500.000</span>
                 </a>
-                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 700000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 700000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-2xl text-white">Rp 700.000</span>
                 </a>
-                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 1000000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#2F9297] border border-[#E8E9EE]">
+                <a href="{{ route('front.checkout', ['fundraising' => $fundraising->slug, 'totalAmountDonation' => 1000000])}}" class="w-[150px] h-[150px] flex items-center justify-center rounded-[30px] bg-[#FF7815] border border-[#E8E9EE]">
                     <span class="font-bold text-center text-2xl text-white">Rp 1.000.000</span>
                 </a>
             </div>

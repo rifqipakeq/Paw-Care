@@ -71,7 +71,7 @@ class FundraisingController extends Controller
             $validated = $request->validated();
 
             if($request->hasFile('thumbnail')){
-                $thumbnailPath = $request->file('thumbnail')->store('thumbnails','public');
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails','cloudinary');
                 $validated['thumbnail'] = $thumbnailPath;
             }
 
@@ -129,7 +129,7 @@ class FundraisingController extends Controller
             $validated= $request->validated();
 
             if($request->hasFile('thumbnail')){
-                $thumbnailPath = $request->file('thumbnail')->store('thumbnails','public');
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails','cloudinary');
                 $validated['thumbnail'] = $thumbnailPath;
             } 
 
