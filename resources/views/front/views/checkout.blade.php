@@ -91,7 +91,7 @@
                         <div class="mr-[10px] w-6 h-6 flex items-center justify-center overflow-hidden">
                             <img src="{{ asset('assets/images/icons/call.svg') }}" class="h-full w-full object-contain" alt="icon">
                         </div>
-                        <input type="number" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="Masukan Nomor WhatsApp Anda" name="phone_number"> 
+                        <input type="number" class="font-semibold placeholder:text-[#292E4B] placeholder:font-normal w-full outline-none" placeholder="Masukan Nomor WhatsApp Anda (Masukan Kode +62 diawal)" name="phone_number"> 
                     </div>
                 </div>
                 <div class="flex flex-col gap-[10px]">
